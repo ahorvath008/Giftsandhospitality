@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %} Trainline Gift and Hospitality Register {% endblock %}
+
+<body>
+{% block body %}
+<br>
+<br>
+<br>
+
+   <table class="table table-striped">
+
+    <tr>
+            <th> Trainline Office </th>
+            <th> Gift received from </th>
+            <th> Date gift received </th>
+            <th> Gift Description </th>
+            <th> Action taken </th>
+            <th> Date of Event </th>
+            <th> Funds Raised for Charity </th>
+    </tr>
+    <tr>
+        {% for gift in gifts  %}
+            <td> {{gift.office}} </td>
+            <td> {{gift.gift_received_from}} </td>
+            <td> {{gift.date_gift_received}} </td>
+            <td> {{gift.gift_description}}  </td>
+            <td> {{gift.action_taken}}  </td>
+            <td> {{gift.date_event}}   </td>
+            <td> {{gift.amount_raised}}   </td>
+
+
+    </tr>
+   {% endfor %}
+
+
+  </table>
+{% endblock %}
+
+</body>
+</html>

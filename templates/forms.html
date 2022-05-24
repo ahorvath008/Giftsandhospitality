@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %} Trainline Gift and Hospitality Register {% endblock %}
+{% block body %}
+
+<br>
+<br>
+
+<form action="/submit" METHOD ="POST">
+
+  <div class="mb-3">
+          <label> Office:</label>
+                                        <select name="office" id="office">
+                                        <option value = "London" selected>London</option>
+                                        <option value = "Edinburgh">Edinburgh </option>
+                                        <option value = "Milan">Milan</option>
+                                        <option value = "Barcelona">Barcelona</option>
+                                        <option value = "Paris">Paris</option>
+                                </select>
+                                </div>
+
+    <div class="mb-3">
+        <label> Gift received from:</label>
+        <input type="text" class="form-control" name="gift_received_from" required="1">
+    </div>
+
+    <div class="mb-3">
+    <label>Date gift received:</label>
+        <input type="date" class="form-control" name="date_gift_received" required="1">
+    </div>
+
+    <div class="mb-3">
+    <label>Gift Description:</label>
+                                    <input type="text" class="form-control" name="gift_description" required="1">
+                                </div>
+
+
+
+    <div class="mb-3">
+                                    <label>Action taken: </label>
+                                    <input type="text" class="form-control" name="action_taken" required="1">
+                                </div>
+
+
+    <div class="mb-3">
+                                    <label>Gift/Fundraising Event: </label>
+                                    <input type="text" class="form-control" name="date_event" required="1">
+                                </div>
+
+    <div class="mb-3">
+                                    <label>Amount raised for charity: </label>
+                                    <input type="number" class="form-control" name="amount_raised" required="1">
+                                </div>
+
+
+
+
+                            </div>
+                         <input type = "submit" value = "Submit Data" class = "btn-btn-primary">
+       </form>
+
+{% endblock %}
